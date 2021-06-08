@@ -9,13 +9,18 @@ export class GithubApiService{
         let options: any = {
             headers:{
                 'User-Agent':'request'
-            }
+            },
+            json:true
         }
         request.get('https://api.github.com/users/'+userName, options, (error:any, response:any, body:any)=>{
         // console.log(error);    
         // console.log(response);
         //console.log(body);
-        let user = new User(body);
+        
+        //let user = new User(JSON.parse(body));
+        //adding json:true leads to noi use of parsing now
+        let user = new User(body); 
+        console.log(user);
         })
     }
 

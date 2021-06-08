@@ -21,6 +21,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GithubApiService = void 0;
 var request = __importStar(require("request"));
+var users_1 = require("./users");
+//request library returns the response body as a string by default. it needs to be parsed
+// as a JSON object in order to access its properties. 
 var GithubApiService = /** @class */ (function () {
     function GithubApiService() {
     }
@@ -28,12 +31,17 @@ var GithubApiService = /** @class */ (function () {
         var options = {
             headers: {
                 'User-Agent': 'request'
-            }
+            },
+            json: true
         };
         request.get('https://api.github.com/users/' + userName, options, function (error, response, body) {
             // console.log(error);    
             // console.log(response);
-            console.log(body);
+            //console.log(body);
+            //let user = new User(JSON.parse(body));
+            //adding json:true leads to noi use of parsing now
+            var user = new users_1.User(body);
+            console.log(user);
         });
     };
     GithubApiService.prototype.getRepos = function () {
