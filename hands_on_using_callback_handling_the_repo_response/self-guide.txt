@@ -1,0 +1,25 @@
+1. start with: 
+npm init
+tsc --init
+
+2. create out and src folder
+uncomment them from lines 17,18 and point to them in tsconfig
+
+3. create index.ts in src folder
+
+4. add the start script in package.json
+
+5. add dependencies like lodash, requests
+npm install request lodash --save
+
+6. see definitelyTyped from github repo
+npm install @types/lodash @types/request --save-dev
+
+7. I'll be accessing the API from my github api
+https://api.github.com/users/arjuaman
+
+8. create repo.ts and users.ts in src and add respective classes to them
+
+9. create GithubApi Service.ts in src too
+
+
