@@ -1,0 +1,20 @@
+Add the export keyword before the function name so it is available to other modules.
+
+
+To import a single export from a module:
+import { <component name> } from '<module name>'
+
+To rename an import, use the as keyword:
+import { <component name> as <new name> } from '<module name>'
+
+To import the entire module into a single variable, and use it to access the module exports:
+import * as <variable name> from '<module name>'
+
+
+In JavaScript, you use external libraries in your code by using the requires statement. 
+In TypeScript, you gain access to them by using the import statement. 
+After importing a library and its type definition, you can use it in your code and gain the benefits of 
+Intellisense and type checking.
+
+added: npm install --save-dev @types/jquery
+
