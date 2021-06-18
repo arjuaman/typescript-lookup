@@ -1,0 +1,28 @@
+The DOMContentLoaded event fires when the initial HTML document has been 
+completely loaded and parsed, without waiting for stylesheets, images, and 
+subframes to finish loading.
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
+
+**
+
+Differences between main and body:
+
+main:
+The content inside the main element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+
+body:
+The body element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.
+
+An easy example, the footer element; you should put it inside the body, but outside the main, as you will do with your menu, or sidebar.
+
+**
+
+The target event property returns the element that triggered the event. 
+
+**
+
+
+
